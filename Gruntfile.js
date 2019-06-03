@@ -65,28 +65,7 @@ grunt.initConfig({
             maxdepth: 2
         },
     },
-
-    jsonlint: {
-        src: ['package.json']
-    },
     
-    "merge-conflict": {
-        files: [
-            allJSFiles,
-            gruntfilePath
-        ]
-    },
-
-    sloccount: {
-        options: {
-            comments: false,
-            reportPath: 'report/sloc.sc'
-        },
-        src: [
-            allJSFiles
-        ]
-    },
-
     "grunt-license-report": {
         output: {
             path: './report/licenses',
@@ -182,9 +161,6 @@ grunt.registerTask('default', [
     'babel',
     'uglify',
     'jshint',
-    'jsonlint',
-    'merge-conflict',
-    'sloccount',
     'complexity',
     'grunt-license-report',
     'todo',
